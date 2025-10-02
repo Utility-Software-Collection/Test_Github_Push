@@ -1,84 +1,95 @@
-# GitHub 推送权限测试脚本
+# GitHub Push Permission Test Script
 
-这是一个用于测试你是否对某个 GitHub 仓库具有 **推送(Push)权限** 的 Bash 脚本.
-脚本会自动创建一个临时分支并尝试推送一个测试文件，最终清理并恢复原状态，确保安全无残留.
+This is a Bash script designed to test whether you have **push** permissions for a specific GitHub repository. The script automatically creates a temporary branch and attempts to push a test file, then cleans up and restores the original state to ensure no residual changes.
 
-## 语言
-  [EN](https://github.com/Utility-Software-Collection/Test_Github_Push/blob/main/README.md)
-  
-## 🚀 功能特点
+## Language
+  [CN](https://github.com/Utility-Software-Collection/Test_Github_Push/blob/main/README-CN.md)
 
-- ✅ 自动克隆或使用本地已有的仓库
-- 🔍 检测仓库访问权限（公有/私有）
-- 🧪 创建临时分支并尝试推送测试文件
-- 📝 记录操作日志到本地文件
-- 🧹 支持自动清理临时分支和文件
-- ⚠️ 提供交互式确认，避免误操作
+## 🚀 Features
 
-## 📦 使用方法
+- ✅ Automatically clones or uses existing local repositories
 
-### 1. 下载脚本
+- 🔍 Detects repository access permissions (public/private)
 
-将 `Test_Github_Push.sh` 下载到你的本地环境：
+- 🧪 Creates temporary branches and attempts to push test files
+
+- 📝 Logs operation results to local files
+
+- 🧹 Supports automatic cleanup of temporary branches and files
+
+- ⚠️ Provides interactive confirmation to prevent misoperations
+
+## 📦 Usage
+
+### 1. Download
+
+Download `Test_Github_Push.sh` to your local environment:
 
 ```bash
 wget https://raw.githubusercontent.com/Utility-Software-Collection/Test_Github_Push/main/Test_Github_Push.sh
 ```
-或前往 [Release](https://github.com/Utility-Software-Collection/Test_Github_Push/releases/) 下载 **.sh** 文件
+Or visit [Release](https://github.com/Utility-Software-Collection/Test_Github_Push/releases/) to download the .sh file.
 
-### 2. 赋予执行权限
-bash
-```
+### 2. Grant Execution Permissions
+
+```bash
 chmod +x Test_Github_Push.sh
 ```
 
-### 3. 运行脚本
-```
+### 3. Run
+```bash
 ./Test_Github_Push.sh
 ```
-接着按照提示输入你要测试的 GitHub 仓库 URL.
+Then follow the prompts to enter the GitHub repository URL you want to test.
 
-## 使用示例
+## 🖥️ Usage Example
 
 ```markdown
-## 🖥️ 使用示例
+##  Test
 
 
-请输入要测试的 GitHub 仓库 URL: https://github.com/username/repo.git
-📥 本地仓库不存在，正在 clone...
-🔍 当前远程仓库 URL: https://github.com/username/repo.git
-🔍 检测仓库访问权限...
-ℹ️ 仓库可访问 [可能是公有仓库或你有权限]
-是否继续测试 push 权限？(Y/N): Y
-🔍 正在创建临时分支: Push-test-1640995200
-🚀 尝试推送到远程...
-✅ 推送成功，你对该仓库有写权限！
-是否删除临时分支和测试文件？(Y/N): Y
-🧹 开始清理...
-✨ 清理完成，仓库已恢复测试前状态。
-ℹ️ 日志已记录到 Push_test.log
+Please enter the GitHub repository URL to test: https://github.com/username/repo.git
+📥 Local repository doesn't exist, cloning...
+🔍 Current remote repository URL: https://github.com/username/repo.git
+🔍 Checking repository access permissions...
+ℹ️ Repository is accessible [may be public or you have permissions]
+    Continue testing push permissions? (Y/N): Y
+🔍 Creating temporary branch: Push-test-1640995200
+🚀 Attempting to push to remote...
+✅ Push successful! You have write permissions to this repository!
+    Delete temporary branch and test files? (Y/N): Y
+🧹 Cleaning up...
+✨ Cleanup completed, repository restored to pre-test state.
+ℹ️ Log recorded to Push_test.log
  
  
 ```
 
-## 📄 日志文件
+## 📄 Log File
 
-脚本会记录每次测试的结果到 `Push_test.log`，内容包括：
+The script records each test result to `Push_test.log`, including:
 
-- 测试时间
-- 仓库 URL
-- 分支名
-- 推送是否成功
-- 错误信息（如有）
+- Test timestamp
 
-## ⚠️ 注意事项
+- Repository URL
 
-- 请确保你已安装 `git` 并配置好 SSH 或 HTTPS 认证方式
-- 如果仓库是私有的，请确保你有权限访问
-- 脚本会尝试清理临时分支，但如果中断执行，请手动清理
-- 建议在测试前保存或提交本地更改，避免冲突
+- Branch name
 
-## 📜 许可证
-本项目使用 MIT License
+- Push success status
+
+- Error messages (if any)）
+
+## ⚠️ Precautions
+
+- Ensure you have git installed and configured with SSH or HTTPS authentication
+
+- If the repository is private, make sure you have access permissions
+
+- The script attempts to clean up temporary branches, but manual cleanup may be needed if execution is interrupted
+
+- Recommended to save or commit local changes before testing to avoid conflicts
+
+## 📜 License
+Test_Github_Push is licensed under the **The MIT License (MIT)** (https://mit-license.org/).
 ---
-如果你觉得这个脚本有用，欢迎 ⭐ Star 这个仓库或提交 Issue 和 Pull Request！
+If you find this script useful, welcome to ⭐ Star this repository or submit Issues and Pull Requests!
