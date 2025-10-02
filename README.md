@@ -19,9 +19,9 @@
 将 `Test_Github_Push.sh` 下载到你的本地环境：
 
 ```bash
-wget https://raw.githubusercontent.com/你的用户名/你的仓库名/main/Test_Github_Push.sh
+wget https://raw.githubusercontent.com/Utility-Software-Collection/Test_Github_Push/main/Test_Github_Push.sh
 ```
-或前往 [Release]([URL](https://github.com/Utility-Software-Collection/Test_Github_Push/releases/download/v0.1/Test_Github_Push.sh)) 下载 **.sh** 文件
+或前往 [Release](https://github.com/Utility-Software-Collection/Test_Github_Push/releases/) 下载 **.sh** 文件
 
 ### 2. 赋予执行权限
 bash
