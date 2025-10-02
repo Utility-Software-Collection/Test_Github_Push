@@ -3,6 +3,9 @@
 这是一个用于测试你是否对某个 GitHub 仓库具有 **推送(Push)权限** 的 Bash 脚本.
 脚本会自动创建一个临时分支并尝试推送一个测试文件，最终清理并恢复原状态，确保安全无残留.
 
+## 语言
+  [EN](https://github.com/Utility-Software-Collection/Test_Github_Push/blob/main/README.md)
+  
 ## 🚀 功能特点
 
 - ✅ 自动克隆或使用本地已有的仓库
